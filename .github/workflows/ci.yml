@@ -32,6 +32,8 @@ jobs:
         run: pytest tests/ -v --tb=short
 
       - name: Test CLI
+        env:
+          PYTHONUTF8: "1"
         run: |
           harmonia --version
           harmonia check --json

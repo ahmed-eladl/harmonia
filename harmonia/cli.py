@@ -9,7 +9,28 @@ import sys
 from harmonia import __version__, __banner__
 
 
+def _ensure_utf8_stdout() -> None:
+    """Reconfigure stdout/stderr to UTF-8 on Windows.
+
+    Windows consoles default to cp1252 which can't print emoji.
+    """
+    if sys.platform == "win32":
+        try:
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+            sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, OSError):
+            # Python < 3.7 or non-reconfigurable stream
+            import io
+            sys.stdout = io.TextIOWrapper(
+                sys.stdout.buffer, encoding="utf-8", errors="replace"
+            )
+            sys.stderr = io.TextIOWrapper(
+                sys.stderr.buffer, encoding="utf-8", errors="replace"
+            )
+
+
 def main() -> None:
+    _ensure_utf8_stdout()
     parser = argparse.ArgumentParser(
         prog="harmonia",
         description="Bring harmony to your ML dependency stack",
