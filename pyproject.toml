@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmonia"
+version = "0.2.0"
+description = "Bring harmony to your ML dependency stack — check, diagnose, and fix version conflicts"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = ["pytorch", "transformers", "compatibility", "cuda", "versions", "dependency", "ml"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+]
+
+# Zero runtime dependencies
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.scripts]
+harmonia = "harmonia.cli:main"
+
+[tool.setuptools.package-data]
+harmonia = ["data/*.json"]
+
+[tool.setuptools.packages.find]
+include = ["harmonia*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
