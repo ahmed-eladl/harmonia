@@ -125,9 +125,9 @@ def _cmd_doctor() -> None:
         print(f"  glibc:      {os_info.glibc_version}")
         from harmonia.database import version_tuple
         if version_tuple(os_info.glibc_version) < (2, 17):
-            print(f"              ⚠️  Too old for manylinux2014 wheels")
+            print("              ⚠️  Too old for manylinux2014 wheels")
         else:
-            print(f"              ✅ OK for manylinux2014")
+            print("              ✅ OK for manylinux2014")
     print()
 
     # Python
@@ -136,7 +136,7 @@ def _cmd_doctor() -> None:
     if env.venv:
         print(f"  Env:        {env.venv} ✅")
     else:
-        print(f"  Env:        system (⚠️  consider using a virtualenv)")
+        print("  Env:        system (⚠️  consider using a virtualenv)")
     print()
 
     # GPU
@@ -159,11 +159,11 @@ def _cmd_doctor() -> None:
     if cuda.smi_version:
         print(f"    CUDA (nvidia-smi): {cuda.smi_version}  (max supported by driver)")
     else:
-        print(f"    nvidia-smi: not available")
+        print("    nvidia-smi: not available")
     if cuda.nvcc_version:
         print(f"    CUDA (nvcc): {cuda.nvcc_version}  (toolkit installed)")
     else:
-        print(f"    nvcc: not installed")
+        print("    nvcc: not installed")
     if cuda.torch_cuda_version:
         print(f"    CUDA (torch): {cuda.torch_cuda_version}  (PyTorch build)")
     if cuda.cudnn_version:

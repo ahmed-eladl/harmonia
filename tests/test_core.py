@@ -10,7 +10,6 @@ from harmonia.database import (
     get_known_conflicts,
     get_torch_versions,
     get_transformers_info,
-    get_transformers_versions,
     load_db,
     normalize_python,
     satisfies_constraint,
