@@ -159,7 +159,7 @@ harmonia check --json
 
 Returns structured JSON with errors, warnings, and environment info.
 
-## OpenClaw Skill
+## [OpenClaw Skill](https://clawhub.ai/ahmed-eladl/harmonia)
 
 harmonia is available as an [OpenClaw](https://github.com/openclaw/openclaw) skill. Install it and your AI agent can diagnose ML environments through chat:
 
