@@ -1,6 +1,6 @@
 """harmonia — bring harmony to your ML dependency stack."""
 
-__version__ = "0.3.1"
+__version__ = "0.3.0"
 __banner__ = r"""
   _                                  _
  | |__   __ _ _ __ _ __ ___   ___  _ __ (_) __ _

@@ -5,7 +5,7 @@
 `harmonia` detects your GPU, CUDA, driver, OS, Python, and installed packages — then tells you exactly what's compatible with what. Zero dependencies. Works offline.
 
 ```
-pip install harmonia-ml
+pip install harmonia
 ```
 
 ## The problem

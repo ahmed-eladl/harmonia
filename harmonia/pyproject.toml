@@ -3,18 +3,14 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "harmonia-ml"
-version = "0.3.1"
+name = "harmonia"
+version = "0.3.0"
 description = "Bring harmony to your ML dependency stack — check, diagnose, and fix version conflicts"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.8"
-authors = [{ name = "Ahmed Eladl", email = "aeladl.dev@gmail.com" }]
+authors = [{ name = "Your Name", email = "you@example.com" }]
 keywords = ["pytorch", "transformers", "compatibility", "cuda", "versions", "dependency", "ml"]
-[project.urls]
-Homepage = "https://github.com/ahmed-eladl/harmonia"
-Repository = "https://github.com/ahmed-eladl/harmonia"
-Issues = "https://github.com/ahmed-eladl/harmonia/issues"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
